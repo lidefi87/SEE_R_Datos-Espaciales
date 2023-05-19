@@ -25,8 +25,7 @@ servidores %>%
 #Guardamos el URL de este set de datos
 coastwatch_url <- servidores %>% 
   filter(short_name == "CSWC") %>% 
-  select(url) %>% 
-  pull()
+  pull(url)
 #Verifiquemos el URL
 coastwatch_url
 
@@ -76,7 +75,7 @@ info(temp_sup_res$info$dataset_id[5])
 # Accediendo a los datos desde ERDDAP -------------------------------------
 #Una vez que identificamos el set de datos que necesitamos,
 #vamos a accederlos de manera remota 
-temp_sup_ecu <- griddap(temp_sup_res$info$dataset_id[5],
+temp_sup_ecu <- griddap(temp_sup_res$info$dataset_id[4],
                         #Limites temporales
                         time = c("2019-01-01", "2019-12-31"),
                         #Limites espaciales
@@ -111,9 +110,9 @@ tierra <- rnaturalearth::ne_countries(returnclass = "sf")
 
 temp_sup_ecu$data %>% 
   filter(lubridate::month(time) <= 4 | lubridate::month(time) == 12) %>% 
-  group_by(lat, lon) %>% 
+  group_by(latitude, longitude) %>% 
   summarise(temp_prom = mean(sstMasked, na.rm = T)) %>% 
-  ggplot(aes(x = lon, y = lat))+
+  ggplot(aes(x = longitude, y = latitude))+
   geom_contour_filled(aes(z = temp_prom), binwidth = 1.5)+
   scale_fill_brewer(palette = "YlOrRd")+
   geom_sf(data = tierra, inherit.aes = F)+
