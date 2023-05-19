@@ -1,0 +1,10 @@
+install.packages(
+ c( 
+  "lubridate",
+  "raster",
+  "RColorBrewer",
+  "rerddap",
+  "rnaturalearth",
+  "stars",
+  "tidyverse")
+)
