@@ -1,3 +1,7 @@
+<!-- badges: start -->
+  [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lidefi87/SEE_R_Datos-Espaciales/master?urlpath=rstudio)
+  <!-- badges: end -->
+
 # Usando R para acceder a datos satelites de libre acceso
 El contenido de este repositorio fue desarrollado para el **R Week** organizado por la *Sociedad Ecuatoriana de Estadistica (SEE)*.  
   
