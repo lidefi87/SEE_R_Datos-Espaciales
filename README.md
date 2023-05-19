@@ -1,5 +1,5 @@
 <!-- badges: start -->
-  [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lidefi87/SEE_R_Datos-Espaciales/master?urlpath=rstudio)
+  [![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lidefi87/SEE_R_Datos-Espaciales/main?urlpath=rstudio)
   <!-- badges: end -->
 
 # Usando R para acceder a datos satelites de libre acceso
